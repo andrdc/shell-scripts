@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# While read distros.txt 2 - Read lines from a file
+
+sort -k 1,1 -k 2n distros.txt | while read distro version release; do
+	printf "Distro: %s\tVersion: %s\tReleased: %s\n" \
+		$distro \
+		$version \
+		$release
+done
